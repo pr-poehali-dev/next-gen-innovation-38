@@ -11,6 +11,7 @@ export default function Promo() {
 
   return (
     <div
+      id="about"
       ref={container}
       className="relative flex items-center justify-center h-screen overflow-hidden"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
@@ -18,21 +19,32 @@ export default function Promo() {
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
-            src="/images/spiral-circles.jpg"
-            alt="Abstract spiral circles"
+            src="https://cdn.poehali.dev/projects/b1e0d670-4557-4a00-b605-73eeee2eae13/files/e21411bb-80ff-469f-b715-6e9590d71c81.jpg"
+            alt="Уютный интерьер шаурмечной РАЙ"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/55" />
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Анатомия возможностей
-      </h3>
-
-      <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Каждая секция — рамка для твоей истории. Формируй её, миксуй и позволь контенту
-        литься в неожиданные паттерны, заставляя листать дальше.
-      </p>
+      <div className="relative z-10 max-w-3xl px-6 text-center text-white">
+        <span className="inline-block mb-6 text-orange-400 uppercase tracking-[0.3em] text-sm font-bold">
+          О нас
+        </span>
+        <h3 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
+          Готовим с любовью к каждому гостю
+        </h3>
+        <p className="text-lg md:text-2xl opacity-90 leading-relaxed mb-10">
+          В «РАЮ» мы используем только фермерское мясо и свежие продукты. Здесь по-домашнему
+          уютно, а каждая шаурма — как для своих. Заходите — и оставайтесь надолго.
+        </p>
+        <a
+          href="#order"
+          className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full text-base font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105 shadow-xl shadow-orange-500/40"
+        >
+          Заказать
+        </a>
+      </div>
     </div>
   );
 }
